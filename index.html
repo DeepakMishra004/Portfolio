@@ -169,6 +169,48 @@ text-decoration: none;
 color:rgba(17, 110, 105, 0.9);
 }
    
+
+
+/* Custom CSS for Desktop */
+/* ... Your existing styles ... */
+
+/* Custom CSS for Mobile */
+@media only screen and (max-width: 767px) {
+    body {
+                background-color: rgba(17, 110, 105, 0.2);
+            }
+
+            body {
+                width: 767px;
+            }
+
+            #phone_h {
+                height: 800px;
+            }
+
+            .cont {
+                display: flex;
+                flex-direction: column; /* Stack projects vertically on mobile */
+            }
+
+            .project {
+                margin-bottom: 10px;
+            }
+
+            #inner {
+                justify-content: center;
+                align-items: center;
+            }
+            #Des_cont{
+                font-size: small;
+            }
+   
+
+   
+   
+
+}
+
         
     </style>
 </head>
@@ -181,75 +223,65 @@ color:rgba(17, 110, 105, 0.9);
     <section id="projects">
         <div class="container">
             <h2 class="sidee"><strong>Projects</strong></h2>
-
-            <div class="project">
-                <h3>Project 1</h3>
-                <div class="project-description">
-                    <p>
-                        Project 1 :- <strong>Quick Mart </strong> is a web application  that I developed to showcase my skills in HTML, CSS, and JavaScript.
-                        E-commerce is a comprehensive online shopping platform designed to provide users with a seamless and efficient shopping experience.
-                         This project aims to create a user-friendly website where customers can easily browse, search, and purchase a wide range of products.
-                          Frontend: HTML, CSS, JavaScriptQuick Mart Ecommerce aspires to be a one-stop solution for customers, providing a convenient and enjoyable online shopping experience.
-                    </p>
+            <div class="cont">
+                <div class="project" id="inner">
+                    <h3>Project 1</h3>
+                    <div>
+                        <div class="project-description" id="Des_cont">
+                            <p>
+                                Project 1 :- <strong>Quick Mart </strong> is a web application that I developed to showcase my skills in HTML, CSS, and JavaScript. E-commerce is a comprehensive online shopping platform designed to provide users with a seamless and efficient shopping experience. This project aims to create a user-friendly website where customers can easily browse, search, and purchase a wide range of products. Frontend: HTML, CSS, JavaScriptQuick Mart Ecommerce aspires to be a one-stop solution for customers, providing a convenient and enjoyable online shopping experience.
+                            </p>
+                        </div>
+                        <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
+                    </div>
                 </div>
-                <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
-            </div>
 
-            <!-- Add more projects as needed -->
-            <div class="project">
-                <h3>Project 2</h3>
-                <div class="project-description">
-                    <p>
-                        Project 2 :- <strong>Toivo</strong> Toivo Music App is a dynamic and feature-rich music application built using Java for Android development, complemented by XML for intuitive layout design
-                        project combines the power of Java programming and XML markup to create a robust and visually appealing music app for Android devices. 
-                        Technology Stack:Java for Backend Development Interface Design File Handling for Offline ModeToivo Music App showcases the synergy of Java and XML.
-                    </p>
+                <!-- Add more projects as needed -->
+                <div class="project" id="inner">
+                    <h3>Project 2</h3>
+                    <div>
+                        <div class="project-description" id="Des_cont">
+                            <p>
+                                Project 2 :- <strong>Toivo</strong> Toivo Music App is a dynamic and feature-rich music application built using Java for Android development, complemented by XML for intuitive layout design project combines the power of Java programming and XML markup to create a robust and visually appealing music app for Android devices. Technology Stack:Java for Backend Development Interface Design File Handling for Offline ModeToivo Music App showcases the synergy of Java and XML.
+                            </p>
+                        </div>
+                        <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
+                    </div>
                 </div>
-                <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
-            </div>
-            <div class="project">
-                <h3>Project 3</h3>
-                <div class="project-description">
-                    <p>
-                        Project 3 :- <strong>Weather information</strong>
-                        This HTML and CSS code creates a simple weather information display. The centered box contains a search input, temperature display, and additional weather information. The styling features a transparent black background with a subtle white shadow. The design is clean, using the Courier New font and a powder blue search input. JavaScript functionality is expected from the "index.js" script, which could handle dynamic data retrieval and updates. The overall result is an aesthetically pleasing and functional weather display with a focus on simplicity and clarity.
-
-                    </p>
+                <div class="project" id="inner">
+                    <h3>Project 3</h3>
+                    <div>
+                        <div class="project-description" id="Des_cont">
+                            <p>
+                                Project 3 :- <strong>Weather information</strong> This HTML and CSS code creates a simple weather information display. The centered box contains a search input, temperature display, and additional weather information. The styling features a transparent black background with a subtle white shadow. The design is clean, using the Courier New font and a powder blue search input. JavaScript functionality is expected from the "index.js" script, which could handle dynamic data retrieval and updates. The overall result is an aesthetically pleasing and functional weather display with a focus on simplicity and clarity.
+                            </p>
+                        </div>
+                        <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
+                    </div>
                 </div>
-                <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
-            </div>
-            <div class="project">
-                <h3>Project 4</h3>
-                <div class="project-description">
-                    <p>
-                        Project 4 :- <strong>Download Hub</strong>
-                        This HTML code creates a web page titled "Download Hub," featuring a dynamic layout for songs and movies. The background showcases an image, setting a visual tone. The page uses marquee elements to add animated highlights, and a centered heading emphasizes "Songs & Movies." Two fieldsets categorize content, one for songs and another for movies. Song links provide options to play or download, while the movie section features scrolling images with a download link. The overall design blends colors, fonts, and visual elements to create an engaging platform for users to explore and download music and movies.
-
-
-
-
-
-                    </p>
+                <div class="project" id="inner">
+                    <h3>Project 4</h3>
+                    <div>
+                        <div class="project-description" id="Des_cont">
+                            <p>
+                                Project 4 :- <strong>Download Hub</strong> This HTML code creates a web page titled "Download Hub," featuring a dynamic layout for songs and movies. The background showcases an image, setting a visual tone. The page uses marquee elements to add animated highlights, and a centered heading emphasizes "Songs & Movies." Two fieldsets categorize content, one for songs and another for movies. Song links provide options to play or download, while the movie section features scrolling images with a download link. The overall design blends colors, fonts, and visual elements to create an engaging platform for users to explore and download music and movies.
+                            </p>
+                        </div>
+                        <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
+                    </div>
                 </div>
-                <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
-            </div>
-            <div class="project">
-                <h3>Project 5</h3>
-                <div class="project-description">
-                    <p>
-                        Project  5:- <strong>Login</strong>
-                        This HTML and CSS code forms a stylish and user-friendly login page. The design prioritizes simplicity and functionality, featuring intuitive input fields, icons, and options like "Remember Me" and pas
-                        sword recovery. The overall aesthetic, defined by a centered layout, pleasing color scheme, and subtle shadows, contributes to a modern look. Additionally, references to external styles hint at potential project expansions, including framed sections, headings, and interactive elements like buttons and displays, showcasing a comprehensive approach to web development.
-                    </p>
+                <div class="project" id="inner">
+                    <h3>Project 5</h3>
+                    <div>
+                        <div class="project-description" id="Des_cont">
+                            <p>
+                                Project 5:- <strong>Login</strong> This HTML and CSS code forms a stylish and user-friendly login page. The design prioritizes simplicity and functionality, featuring intuitive input fields, icons, and options like "Remember Me" and password recovery. The overall aesthetic, defined by a centered layout, pleasing color scheme, and subtle shadows, contributes to a modern look. Additionally, references to external styles hint at potential project expansions, including framed sections, headings, and interactive elements like buttons and displays, showcasing a comprehensive approach to web development.
+                            </p>
+                        </div>
+                        <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
+                    </div>
                 </div>
-                <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
             </div>
-           
-           
-
-            <!-- Add more projects as needed -->
-            <!-- Repeat the structure for projects 3 to 10 -->
-
         </div>
     </section>
 
@@ -257,7 +289,7 @@ color:rgba(17, 110, 105, 0.9);
         <div class="container">
             <h2><strong>Resume</strong></h2>
 
-            <div class="resume">
+            <div class="resume" >
                 <h3>OBJECTIVE</h3>
                 <p><ul><li>Enthusiastic software engineer with a passion for 
                     problem-solving and a proven track record in 
