@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        
+        body {
+            background-color: rgba(17, 110, 105, 0.2);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    opacity: 0; /* Initially set opacity to 0 */
+    transform: translateY(-50px); /* Move the header up by 50px */
+    animation: fadeInDown 0.5s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    
+
+        .project {
+            
+    background-color: rgba(17, 110, 105, 0.2);;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    position: relative;
+    opacity: 0; /* Initially set opacity to 0 */
+    transform: translateY(50px); /* Move the projects down by 50px */
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.resume {
+    background-color: rgba(17, 110, 105, 0.2);;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px); /* Move the resume section down by 50px */
+    animation: slideInUp 1.5s ease-out forwards;
+}
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+.project-description {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(17, 110, 105, 0.2);;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.project:hover .project-description {
+    display: block;
+}
+
+        header {
+            box-sizing: border-box;
+            background-image: url(Blue\ Modern\ Lets\ Do\ This\ LinkedIn\ Banner\ \(2\).png);
+            
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        section {
+            margin: 20px;
+        }
+        .project {
+            background-color: rgba(17, 110, 105, 0.2);;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .project-description {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgb(4, 166, 158);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .project:hover .project-description {
+            display: block;
+        }
+       
+
+        .resume {
+            background-color: rgba(17, 110, 105, 0.2);;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .project-link {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-image: url(1.png);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .sidee {
+    opacity: 0;
+    transform: translateY(50px); /* Move the element down by 50px */
+    animation: slideInUpH2 1.2s ease-out forwards;
+}
+
+@keyframes slideInUpH2 {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.a_url
+{
+    color: black;
+}.a_url:hover{
+text-decoration: none;
+color:rgba(17, 110, 105, 0.9);
+}
+   
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="photo_2.jpg" alt="Profile Image" style="border-radius: 50%; width: 100px; height: 100px;">
+        <h1>DEEPAK MISHRA</h1>
+        <p>Developer <strong style="color: black;">Fresher</strong></p>
+    </header>
+    <section id="projects">
+        <div class="container">
+            <h2 class="sidee"><strong>Projects</strong></h2>
+
+            <div class="project">
+                <h3>Project 1</h3>
+                <div class="project-description">
+                    <p>
+                        Project 1 :- <strong>Quick Mart </strong> is a web application  that I developed to showcase my skills in HTML, CSS, and JavaScript.
+                        E-commerce is a comprehensive online shopping platform designed to provide users with a seamless and efficient shopping experience.
+                         This project aims to create a user-friendly website where customers can easily browse, search, and purchase a wide range of products.
+                          Frontend: HTML, CSS, JavaScriptQuick Mart Ecommerce aspires to be a one-stop solution for customers, providing a convenient and enjoyable online shopping experience.
+                    </p>
+                </div>
+                <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
+            </div>
+
+            <!-- Add more projects as needed -->
+            <div class="project">
+                <h3>Project 2</h3>
+                <div class="project-description">
+                    <p>
+                        Project 2 :- <strong>Toivo</strong> Toivo Music App is a dynamic and feature-rich music application built using Java for Android development, complemented by XML for intuitive layout design
+                        project combines the power of Java programming and XML markup to create a robust and visually appealing music app for Android devices. 
+                        Technology Stack:Java for Backend Development Interface Design File Handling for Offline ModeToivo Music App showcases the synergy of Java and XML.
+                    </p>
+                </div>
+                <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
+            </div>
+            <div class="project">
+                <h3>Project 3</h3>
+                <div class="project-description">
+                    <p>
+                        Project 3 :- <strong>Weather information</strong>
+                        This HTML and CSS code creates a simple weather information display. The centered box contains a search input, temperature display, and additional weather information. The styling features a transparent black background with a subtle white shadow. The design is clean, using the Courier New font and a powder blue search input. JavaScript functionality is expected from the "index.js" script, which could handle dynamic data retrieval and updates. The overall result is an aesthetically pleasing and functional weather display with a focus on simplicity and clarity.
+
+                    </p>
+                </div>
+                <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
+            </div>
+            <div class="project">
+                <h3>Project 4</h3>
+                <div class="project-description">
+                    <p>
+                        Project 4 :- <strong>Download Hub</strong>
+                        This HTML code creates a web page titled "Download Hub," featuring a dynamic layout for songs and movies. The background showcases an image, setting a visual tone. The page uses marquee elements to add animated highlights, and a centered heading emphasizes "Songs & Movies." Two fieldsets categorize content, one for songs and another for movies. Song links provide options to play or download, while the movie section features scrolling images with a download link. The overall design blends colors, fonts, and visual elements to create an engaging platform for users to explore and download music and movies.
+
+
+
+
+
+                    </p>
+                </div>
+                <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
+            </div>
+            <div class="project">
+                <h3>Project 5</h3>
+                <div class="project-description">
+                    <p>
+                        Project  5:- <strong>Login</strong>
+                        This HTML and CSS code forms a stylish and user-friendly login page. The design prioritizes simplicity and functionality, featuring intuitive input fields, icons, and options like "Remember Me" and pas
+                        sword recovery. The overall aesthetic, defined by a centered layout, pleasing color scheme, and subtle shadows, contributes to a modern look. Additionally, references to external styles hint at potential project expansions, including framed sections, headings, and interactive elements like buttons and displays, showcasing a comprehensive approach to web development.
+                    </p>
+                </div>
+                <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
+            </div>
+           
+           
+
+            <!-- Add more projects as needed -->
+            <!-- Repeat the structure for projects 3 to 10 -->
+
+        </div>
+    </section>
+
+    <section id="resume" class="sidee">
+        <div class="container">
+            <h2><strong>Resume</strong></h2>
+
+            <div class="resume">
+                <h3>OBJECTIVE</h3>
+                <p><ul><li>Enthusiastic software engineer with a passion for 
+                    problem-solving and a proven track record in 
+                    developing efficient and scalable solutions. Seeking 
+                    to contribute my technical expertise and collaborative 
+                    skills to a dynamic team at IT Company.</li></ul></p>
+                <h3>CONTACT INFORMATION</h3> 
+                <p><ul> <li>Phone: <strong>9119965133</strong></li>
+                    <li>E-mail: <strong>deepakmishraofficial10@gmail.com</strong></li>
+                    <li>Linkedin : <strong><a href="https://www.linkedin.com/in/deepak-mishra-6b7b53253/" class="a_url"  ">https://www.linkedin.com/in/deepak-mishra-6b7b53253/</a></strong></li>
+                    <li>Twitter : <strong><a href="https://x.com/deepak_mis14207?t=B0bn4Iwii0Z4iahdbqPY9w&s=09" class="a_url" ">@deepak_mis14207</a></strong></li>
+                    <li> GitHub: <strong><a href="https://github.com/DeepakMishra004" class="a_url" ">DeepakMishra004</a></strong></li>
+                    <li>Address: <strong> Rania, Kanpur Dehat, UP</strong></li></ul></p>
+                    <br>
+                 <h3>Education</h3>
+                <p><h5> Bachelor's in Computer Science(BCA,2024) </h5>
+                    <ul>
+                        <li><strong>"Signa Institute of Professional Studies"</strong></li>
+                    </ul>
+                </p>
+                
+                <p><h5>Intermediate(12th,2021) =  78.5%</h5>
+                    <ul>
+                    <li><strong>"O A S S INTER COLLEGE"</strong></li>
+                </ul>
+                </p>
+                <p><h5>High school(10th,2019) =  77.84%</h5>
+                    <ul>
+                    <li><strong>"O A S S INTER COLLEGE"</strong></li>
+                </ul>
+                </p>
+                <h3>Skills</h3>
+                <p><ul><li>Language: <strong>HTML, CSS, JavaScript, Java, C++, C</strong></li> 
+                
+                     <li>Frontend: <strong>React, Bootstrap</strong></li>
+                    
+                    <li>Backend: <strong> Node.js</strong></li>
+                    
+                    <li>Database: <strong>MongoDB</strong></li>
+                    
+                   <li> Version Control: <strong> Git, GitHub</strong></li></p>
+                    
+                </ul>
+                <h3>COURSES & CERTIFICATIONS</h3>
+                <p><ul>
+                    <li> <strong>TALLY ERP 9</strong></li>
+                    <li><strong>Microsoft Office</strong> </li>
+                    <li><strong>Web Development Course – 1y</strong></li>
+                </ul></p>
+                <h3>AWARDS</h3>
+                <p><ul>
+                    <li> <strong>Petroleum Conservation Research Association(YOUTH PROGRAMME)1ST</strong></li>
+                    <li> <strong>C C INSTITUTE & INDUSTRY— (Certificate of Appreceation)</strong></li>
+                </ul></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <footer>
+        <p>&copy; 2024 Deepak Mishra</p>
+    </footer>
+</body>
+</html>
