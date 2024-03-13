@@ -236,11 +236,38 @@ color:rgba(17, 110, 105, 0.9);
             display: block;
         }
        
-   
-   
-
 }
+.first-section {
+        display: flex;
+        justify-content: space-around;
+        margin: 60px 0;
+        align-items: center;
+      }
 
+.first-section > div {
+        width: 30%;
+      }
+      .left-section {
+        font-size: 2rem;
+      }
+      .left-section .btn {
+        padding: 12px;
+        background-color: rgb(3, 17, 29);
+        color: white;
+        border: 2px solid white;
+        font-size: 15px;
+        cursor: pointer;
+        margin-top: 30px;
+      }
+      .right-section img {
+        width: 80%;
+      }
+      .purpul {
+        color: blueviolet;
+      }
+      #element {
+        color: blueviolet;
+      }
         
     </style>
 </head>
@@ -250,6 +277,21 @@ color:rgba(17, 110, 105, 0.9);
         <h1>DEEPAK MISHRA</h1>
         <p>Developer <strong style="color: black;">Fresher</strong></p>
     </header>
+    <section class="first-section">
+        <div class="left-section">
+          Hi, My name <span class="purpul"> Deepak </span>
+          <div>and I am a passionate</div>
+          <div>web developer</div>
+          <span id="element"></span>
+          <div class="button">
+            <button class="btn">Download Rusume</button>
+            <button class="btn">Git Hub</button>
+          </div>
+        </div>
+        <div class="right-section">
+          <img src="app-development.png" alt="" />
+        </div>
+      </section>
     <section id="projects">
         <div class="container">
             <h2 class="sidee"><strong>Projects</strong></h2>
@@ -383,8 +425,16 @@ color:rgba(17, 110, 105, 0.9);
 
     <!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+     <script>
+        var typed = new Typed("#element", {
+          strings: ["Web Developer", "Microsoft office expert", "Fresher"],
+          typeSpeed: 50,
+        });
+      </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 
     <footer>
         <p>&copy; 2024 Deepak Mishra</p>
