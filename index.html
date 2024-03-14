@@ -277,6 +277,67 @@ color:rgba(17, 110, 105, 0.9);
       #element {
         color: blueviolet;
       }
+
+        @keyframes rotateCube {
+    0% { transform: rotateX(0) rotateY(0); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.scene {
+    perspective: 1000px;
+}
+
+.cube {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotateCube 10s infinite linear;
+}
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.front {
+    transform: translateZ(100px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.top {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+.bottom {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+    
         
     </style>
 </head>
@@ -298,7 +359,18 @@ color:rgba(17, 110, 105, 0.9);
           </div>
         </div>
         <div class="right-section">
-          <img src="app-development.png" alt="" />
+         <div class="content">
+                <div class="scene">
+                    <div class="cube">
+                        <div class="face front">Front</div>
+                        <div class="face back">Back</div>
+                        <div class="face top">Top</div>
+                        <div class="face bottom">Bottom</div>
+                        <div class="face left">Left</div>
+                        <div class="face right">Right</div>
+                    </div>
+                </div>
+        </div>
         </div>
       </section>
     <section id="projects">
@@ -440,13 +512,31 @@ color:rgba(17, 110, 105, 0.9);
             <button type="button" class="btn btn-outline-success"><a href="Deepak- CV.pdf" class="link" download>Download Rusume <i class="fa-solid fa-download"></i></a></button> 
           </div>
     </section>
-
-    <!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script>
+      const cube = document.querySelector('.cube');
+
+// Add event listeners to rotate the cube on mouse hover
+cube.addEventListener('mouseenter', () => {
+    cube.style.animation = 'none';
+});
+
+cube.addEventListener('mouseleave', () => {
+    cube.style.animation = 'rotateCube 10s infinite linear';
+});
+
+// Add event listeners to rotate the cube on touch
+cube.addEventListener('touchstart', () => {
+    cube.style.animation = 'none';
+});
+
+cube.addEventListener('touchend', () => {
+    cube.style.animation = 'rotateCube 10s infinite linear';
+});
+
         var typed = new Typed("#element", {
           strings: ["Web Developer", "Microsoft office expert", "Fresher"],
           typeSpeed: 50,
