@@ -336,7 +336,54 @@ color:rgba(17, 110, 105, 0.9);
 .right {
     transform: rotateY(90deg) translateZ(100px);
 }
-
+/*-----------------------contact---------------*/
+.containere {
+    max-width: 600px;
+    max-height: 530px;
+    box-sizing: border-box;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .form-group textarea {
+    height: 80px;
+  }
+  
+  .form-group button {
+    background-color: #0f141a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form-group button:hover {
+    background-color: #0056b3;
+  }
     
         
     </style>
@@ -448,68 +495,26 @@ color:rgba(17, 110, 105, 0.9);
     </section>
 
     <section id="resume" class="sidee">
-        <div class="container">
-            <h2><strong>Information about me</strong></h2>
-
-            <div class="resume" >
-                <h3>OBJECTIVE</h3>
-                <p><ul><li>Enthusiastic software engineer with a passion for 
-                    problem-solving and a proven track record in 
-                    developing efficient and scalable solutions. Seeking 
-                    to contribute my technical expertise and collaborative 
-                    skills to a dynamic team at IT Company.</li></ul></p>
-                <h3>CONTACT INFORMATION</h3> 
-                <p><ul> <li>Phone: <strong>9119965133</strong></li>
-                    <li>E-mail: <strong>deepakmishraofficial10@gmail.com</strong></li>
-                    <li>Linkedin : <strong><a href="https://www.linkedin.com/in/deepak-mishra-6b7b53253/" class="a_url"  ">https://www.linkedin.com/in/deepak-mishra-6b7b53253/</a></strong></li>
-                    <li>Twitter : <strong><a href="https://x.com/deepak_mis14207?t=B0bn4Iwii0Z4iahdbqPY9w&s=09" class="a_url" ">@deepak_mis14207</a></strong></li>
-                    <li> GitHub: <strong><a href="https://github.com/DeepakMishra004" class="a_url" ">DeepakMishra004</a></strong></li>
-                    <li>Address: <strong> Rania, Kanpur Dehat, UP</strong></li></ul></p>
-                    <br>
-                 <h3>Education</h3>
-                <p><h5> Bachelor's in Computer Science(BCA,2024) </h5>
-                    <ul>
-                        <li><strong>"Signa Institute of Professional Studies"</strong></li>
-                    </ul>
-                </p>
-                
-                <p><h5>Intermediate(12th,2021) =  78.5%</h5>
-                    <ul>
-                    <li><strong>"O A S S INTER COLLEGE"</strong></li>
-                </ul>
-                </p>
-                <p><h5>High school(10th,2019) =  77.84%</h5>
-                    <ul>
-                    <li><strong>"O A S S INTER COLLEGE"</strong></li>
-                </ul>
-                </p>
-                <h3>Skills</h3>
-                <p><ul><li>Language: <strong>HTML, CSS, JavaScript, Java, C++, C</strong></li> 
-                
-                     <li>Frontend: <strong>React, Bootstrap</strong></li>
-                    
-                    <li>Backend: <strong> Node.js</strong></li>
-                    
-                    <li>Database: <strong>MongoDB</strong></li>
-                    
-                   <li> Version Control: <strong> Git, GitHub</strong></li></p>
-                    
-                </ul>
-                <h3>COURSES & CERTIFICATIONS</h3>
-                <p><ul>
-                    <li> <strong>TALLY ERP 9</strong></li>
-                    <li><strong>Microsoft Office</strong> </li>
-                    <li><strong>Web Development Course – 1y</strong></li>
-                </ul></p>
-                <h3>AWARDS</h3>
-                <p><ul>
-                    <li> <strong>Petroleum Conservation Research Association(YOUTH PROGRAMME)1ST</strong></li>
-                    <li> <strong>C C INSTITUTE & INDUSTRY— (Certificate of Appreceation)</strong></li>
-                </ul></p>
-            </div>
-        </div>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-right: 61px; margin-top: 5px;" id="mo">
-            <button type="button" class="btn btn-outline-success"><a href="Deepak- CV.pdf" class="link" download>Download Rusume <i class="fa-solid fa-download"></i></a></button> 
+        <div class="containere"  >
+            <h4>Contact Us</h4>
+            <form action="https://api.web3forms.com/submit" method="POST"" method="post">
+              <div class="form-group">
+                <input type="hidden" name="access_key" value="e53bcd6d-9d54-4892-bb0a-8892d4fac3bc">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="'How can i help you ?" required></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" onsubmit="sendEmail(); reset(); return false;">Submit</button>
+              </div>
+            </form>
           </div>
     </section>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
