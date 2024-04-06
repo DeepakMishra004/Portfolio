@@ -3,550 +3,728 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
-    <!-- Custom CSS -->
-    <style>
-        
-        body {
-            background-color: #fff;
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    opacity: 0; /* Initially set opacity to 0 */
-    transform: translateY(-50px); /* Move the header up by 50px */
-    animation: fadeInDown 0.5s ease-out forwards;
-}
-         .link{
-    color: green;
-   }
-   .link:hover{
-    color: black;
+    <title>Document</title>
+    <!-----font ---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-----css ---->
+   <style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
-   }
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Nunito',sans-serif;
 
-@keyframes fadeInDown {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
+:root{
+    --bg-color:#191f36;
+    --snd-bg-color:#262840;
+    --text-color:#fff;
+    --main-color:#59B2F4;
 
-    
 
-        .project {
-            
-    background-color: rgba(17, 110, 105, 0.2);;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    position: relative;
-    opacity: 0; /* Initially set opacity to 0 */
-    transform: translateY(50px); /* Move the projects down by 50px */
-    animation: fadeInUp 1.5s ease-out forwards;
 }
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
 }
-.resume {
-    background-color: rgba(17, 110, 105, 0.2);;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
-    position: relative;
-    opacity: 0;
-    transform: translateY(50px); /* Move the resume section down by 50px */
-    animation: slideInUp 1.5s ease-out forwards;
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
 }
-
-@keyframes slideInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+selection{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
 }
-
-
-
-
-.project-description {
-    display: none;
-    position: absolute;
-    top: 0;
+.header{
+    position: fixed;
+    top:0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.project:hover .project-description {
-    display: block;
-}
-
-        header {
-           
-            background-color: #333;    
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        section {
-            margin: 20px;
-        }
-        .project {
-            background-color: rgba(17, 110, 105, 0.2);;
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            position: relative;
-        }
-
-        .project-description {
-            display: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            color: #fff;
-            background-color: black;
-            padding: 20px;
-            border-radius: 5px;
-        }
-
-        .project:hover .project-description {
-            display: block;
-        }
-       
-
-        .resume {
-            background-color: rgba(17, 110, 105, 0.2);;
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 5px;
-        }
-
-        .project-link {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        footer {
-
-            
-             background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-        .sidee {
-    opacity: 0;
-    transform: translateY(50px); /* Move the element down by 50px */
-    animation: slideInUpH2 1.2s ease-out forwards;
-}
-
-@keyframes slideInUpH2 {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.a_url
-{
-    color: black;
-}.a_url:hover{
-text-decoration: none;
-color:rgba(17, 110, 105, 0.9);
-}
-   
-
-
-/* Custom CSS for Desktop */
-/* ... Your existing styles ... */
-
-/* Custom CSS for Mobile */
-@media only screen and (max-width: 767px) {
-    body {
-             color: #fff;   
-             background-color: rgb(3, 17, 29);
-             width: 767px;
-        
-            }
-    .contact{
-                color: black;
-            }
-     .a_url {
-                color: rgb(33, 157, 181);
-            }
-            .a_url:hover {
-                color: rgb(104, 73, 98);
-            }
-
-           
-
-            #phone_h {
-                height: 800px;
-            }
-    #mo{
-                margin-top: 6px;
-                margin-left: 531px;
-            }
-
-            .cont {
-                display: flex;
-                flex-direction: column; /* Stack projects vertically on mobile */
-            }
-
-            .project {
-                margin-bottom: 10px;
-            }
-
-            #inner {
-                justify-content: center;
-                align-items: center;
-            }
-            #Des_cont{
-                font-size: small;
-            }
-            .resume{
-                background-color:rgba(17, 110, 105, 0.2);
-            }
-            .project-description {
-                
-            display: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color:black;
-            padding: 20px;
-            border-radius: 5px;
-        }
-
-        .project:hover .project-description {
-            display: block;
-        }
-       
-}
-.first-section {
-        display: flex;
-        justify-content: space-around;
-        margin: 60px 0;
-        align-items: center;
-      }
-
-.first-section > div {
-        width: 30%;
-      }
-      .left-section {
-        font-size: 2rem;
-      }
-      .left-section .btn {
-        padding: 12px;
-        background-color: rgb(3, 17, 29);
-        color: white;
-        border: 2px solid white;
-        font-size: 15px;
-        cursor: pointer;
-        margin-top: 30px;
-      }
-      .right-section img {
-        width: 80%;
-      }
-      .purpul {
-        color: blueviolet;
-      }
-      #element {
-        color: blueviolet;
-      }
-
-        @keyframes rotateCube {
-    0% { transform: rotateX(0) rotateY(0); }
-    100% { transform: rotateX(360deg) rotateY(360deg); }
-}
-.content {
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-}
+    z-index: 100;
 
-.scene {
-    perspective: 1000px;
-}
 
-.cube {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    transform-style: preserve-3d;
-    animation: rotateCube 10s infinite linear;
 }
+.logo{
+   font-size: 2.5rem;
+   color: var(--text-color);
+   font-weight: 700;
+   cursor: default;
+}
+.navbar a{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 700;
 
-.face {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
+
+}
+.navbar a:hover,
+.navbar a.active{
+    color: var(--text-color);
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+.home{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
-}
 
-.front {
-    transform: translateZ(100px);
 }
+.home-container h3{
+    font-size: 3.2rem;
+    font-weight: 700;
 
-.back {
-    transform: rotateY(180deg) translateZ(100px);
 }
+.home-container h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+span{
+    color: var(--main-color);
+}
+.home-container h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
 
-.top {
-    transform: rotateX(-90deg) translateZ(100px);
 }
+.home-img img{
+    width: 25vw;
+    border-radius: 50%;
+    animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.home-container p{
+    font-size: 1.6rem;
 
-.bottom {
-    transform: rotateX(90deg) translateZ(100px);
 }
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem  1.5rem 3rem 0 ;
+    transition: .5s ease;
 
-.left {
-    transform: rotateY(-90deg) translateZ(100px);
 }
+.social-media a:hover{
+    background-color: var(--main-color);
+    color: var(--snd-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
 
-.right {
-    transform: rotateY(90deg) translateZ(100px);
 }
-/*-----------------------contact---------------*/
-.containere {
-    max-width: 600px;
-    max-height: 530px;
-    box-sizing: border-box;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-group input[type="text"],
-  .form-group input[type="email"],
-  .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  .form-group textarea {
-    height: 80px;
-  }
-  
-  .form-group button {
-    background-color: #0f141a;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .form-group button:hover {
-    background-color: #0056b3;
-  }
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+.btn:hover{
+    box-shadow: none;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--snd-bg-color);
+
+}
+.about-img img{
+    width: 25vw;
+    margin-left: 30px;
     
+}
+.about-content{
+    margin-left: 60px;
+}
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+.services h2{
+    margin-bottom: 5rem;
+}
+
+.about-content h3{
+    font-size: 2.6rem;
+}
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+.service-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.service-container .service-box{
+    flex: 1 1 30rem;
+    width: 260px;
+    /*change width*/
+    background-color: var(--snd-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+    height: 420px;
+    
+}
+.service-container .service-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+ .service-box{
+    font-size: 7rem;
+    color: var(--main-color);
+
+ }
+ .service-box h3{
+    font-size: 2.6rem;
+ }
+ .service-box p{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+ }
+ .portfolio h2{
+    margin-bottom: 4rem;
+ }
+ .portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+ }
+ .portfolio-container  .portfolio-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+ }
+ .portfolio-box img{
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0.7;
+ }
+ .portfolio-box:hover img{
+    transform: scale(1.1);
+ }
+ .portfolio-box  .portfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.1),var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+ }
+ .portfolio-box:hover .portfolio-layer{
+    transform: translateY(0);
+
+ } 
+ .portfolio-layer h4{
+    font-size: 3rem;
+ }
+ .portfolio-layer p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+ }
+ .portfolio-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+ }
+ .portfolio-layer a i{
+    font-size: 2rem;
+   color: var(--snd-bg-color);
+ }
+
+
+ .contact h2{
+    margin-bottom: 3rem;
+ }
+ 
+ .contact form{
+    max-width: 70rem;
+    margin: 1rem auto ;
+    text-align: center;
+    margin-bottom: 3rem;
+ }
+ .contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+ }
+ .contact form .input-box input,
+ .contact form textarea{
+    width: 100%;
+    padding:1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--snd-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+ }
+ .contact form .input-box input{
+    width: 48%;
+ }
+ .contact form textarea{
+    resize: none;
+ }
+ .contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+ }
+ .footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--snd-bg-color);
+
+ }
+ .footer-text{
+    font-size: 1.6rem;
+
+ }
+ .footer-iconTop{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem 1rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5rem ease;
+ }
+ .footer-iconTop a:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+
+ }
+ .footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--snd-bg-color);
+ }
+ 
+ 
+@media (max-width: 1200px) {
+    html{
+        font-size: 55%;
+    }
+    
+}
+@media (max-width:991px) {
+    .header{
+        padding: 2rem 3%;
+
+    }
+    section{
+        padding: 10rem 3%;
+    }
+    .services{
+        padding: 7rem;
+
+    }
+    .portfolio{
+        padding-bottom: 7rem;
+    }
+    .contact{
+        min-height: auto;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+    
+}
+@media (max-width:768px) {
+    .navbar.active{
+    display: flex;
+    flex-direction: column;  
+}
+a{
+    padding: 7px;
+}
+
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,0.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+        display: none;
+    }
+   
+   
+    .home{
+        flex-direction: column;
         
+    }
+    .home-container{
+        order: 2;
+    }
+    .home-container h3{
+        font-size: 2.6rem;
+    }
+    .home-container h1{
+        font-size: 5rem;
+    }
+    .home-img img{
+        width: 70vh;
+        margin-top: 4rem;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about-img img{
+        width: 90vh;
+        margin-top: 4rem;
+    }
+    .services h2{
+        margin-bottom: 3rem;
+    }
+    .portfolio h2{
+        margin-bottom: 3rem;
+    }
+    .portfolio-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+
+@media (max-width:610px){
+
+
+    /*========correction===========*/
+    
+ body{
+    width: 100%;
+   
+ }
+ #phone-img{
+    width: 300px;
+ }
+
+ .home img{
+    
+    width: 45vh;
+    
+ }
+ 
+.navbar.active{
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+a{
+    padding: 7px;
+}
+a:hover{
+    color: var(--main-color);
+}
+
+
+    .portfolio-container{
+        grid-template-columns: 1fr;
+
+    }
+    .home-img img{
+        width: 80wh;
+        margin-top: 8rem;
+    }
+    .about-img img{
+        width:100vh ;
+        margin-top: 4rem;
+    }
+
+}
+@media (max-width:450px){
+html{
+    font-size: 50%;
+}
+.contact form .input-box input {
+    width: 100%;
+}
+
+
+
+}
+ 
+
     </style>
 </head>
 <body>
-    <header>
-        <img src="photo_2.jpg" alt="Profile Image" style="border-radius: 50%; width: 100px; height: 100px;">
-        <h1>DEEPAK MISHRA</h1>
-        <p>Developer <strong style="color: black;">Fresher</strong></p>
-    </header>
-    <section class="first-section">
-        <div class="left-section">
-          Hi, My name is <span class="purpul"> Deepak </span>
-          <div>and I am a passionate</div>
-          <div>web developer</div>
-          <span id="element"></span>
-          <div class="button">
-              <a href="Deepak- CV.pdf"  class="btn" download>Download Rusume <i class="fa-solid fa-download"></i></a>
-              <strong><a href="https://github.com/DeepakMishra004"  class="btn" ">Git Hub</a></strong>
-          </div>
+<!--------header------------->
+<header class="header">
+<a href="#" class="logo">Portfolio</a>
+
+<i class="fa-solid fa-bars" id="menu-icon"></i>
+
+<nav class="navbar">
+<a href="#home" class="active">Home</a>
+<a href="#about">About</a>
+<a href="#service">Service</a>
+<a href="#portfolio">portfolio</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+<!-----home selection design-->
+<selection class="home" id="home">
+    <div class="home-container">
+        <h3>Hi, Myself</h3>
+        <h1>Deepak Mishra</h1>
+        <h3>And I'm a <span class="multiple-text" >full stack developer</span></h3>
+        <p> My journey in the world of coding began with a curiosity for problem-solving,
+            and it has since evolved into a fulfilling career.
+            </p>
+        <div class="social-media">
+            <a href="https://x.com/deepak_mis14207?t=B0bn4Iwii0Z4iahdbqPY9w&s=09"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/deepak-mishra-6b7b53253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/DeepakMishra004"><i class="fa-brands fa-github"></i></a>
         </div>
-        <div class="right-section">
-         <div class="content">
-                <div class="scene">
-                    <div class="cube">
-                        <div class="face front" style="background-color: black;border-color: #fff;"><img src="structure.png" alt="" ></div>
-                        <div class="face back"  style="background-color: black; border-color: #fff;"><img src="back.png" alt=""></div>
-                        <div class="face top"  style="background-color: black; border-color: #fff;"><img src="nodejs.png" alt=""></div>
-                        <div class="face bottom"  style="background-color: black;border-color: #fff;"><img src="java.png" alt=""></div>
-                        <div class="face left"  style="background-color: black; border-color: #fff;"><img src="javascript.png" alt=""></div>
-                        <div class="face right"  style="background-color: black;border-color: #fff;"><img src="database.png" alt=""></div>
-                    </div>
-                </div>
+        <a href="Deepak Mishra-CV.pdf" class="btn">Download CV</a>
+
+    </div>
+    <div class="home-img">
+        <img src="img4.png" alt="">
+    </div>
+</selection>
+<!-----about selection design-->
+<selection class="about" id="about">
+    <div class="about-img">
+        <img id="phone-img" src="img3.png" alt="">
+    </div>
+    <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Full stack Developer</h3>
+        <p>Hello , I'm Deepak Mishra, a dedicated and results-driven full-stack web developer and also in application development. With a strong background in both front-end and back-end technologies,
+            I am passionate about crafting seamless and user-friendly web experiences</p>
+        <a href="#" class="btn">Read more</a>
+    </div>
+</selection>
+
+<!-----service selection design-->
+<selection class="services" id="service">
+    <h2 class="heading">My <span>Service</span></h2>
+    <div class="service-container">
+        <div class="service-box">
+            <i class="fa-solid fa-palette"></i>
+            <h3> Web Development</h3>
+            <p>We provide customized web solutions tailored to your needs, including responsive design, user-friendly interfaces,  e-commerce development, and custom features. Our experienced team ensures timely delivery, transparent communication, and continued support for your digital success. </p>
+            <a href="#" class="btn">Read More</a>
         </div>
-        </div>
-      </section>
-    <section id="projects">
-        <div class="container">
-            <h2 class="sidee"><strong>Projects</strong></h2>
-            <div class="cont">
-                <div class="project" id="inner">
-                    <h3>Project 1</h3>
-                    <div>
-                        <div class="project-description" id="Des_cont">
-                            <p>
-                                Project 1 :- <strong>Quick Mart </strong> is a web application that I developed to showcase my skills in HTML, CSS, and JavaScript. E-commerce is a comprehensive online shopping platform designed to provide users with a seamless and efficient shopping experience. This project aims to create a user-friendly website where customers can easily browse, search, and purchase a wide range of products. Frontend: HTML, CSS, JavaScriptQuick Mart Ecommerce aspires to be a one-stop solution for customers, providing a convenient and enjoyable online shopping experience.
-                            </p>
-                        </div>
-                        <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
-                    </div>
-                </div>
-                <div class="project" id="inner">
-                    <h3>Project 2</h3>
-                    <div>
-                        <div class="project-description" id="Des_cont">
-                            <p>
-                                Project 2 :- <strong>Toivo</strong> Toivo Music App is a dynamic and feature-rich music application built using Java for Android development, complemented by XML for intuitive layout design project combines the power of Java programming and XML markup to create a robust and visually appealing music app for Android devices. Technology Stack:Java for Backend Development Interface Design File Handling for Offline ModeToivo Music App showcases the synergy of Java and XML.
-                            </p>
-                        </div>
-                        <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
-                    </div>
-                </div>
-                <div class="project" id="inner">
-                    <h3>Project 3</h3>
-                    <div>
-                        <div class="project-description" id="Des_cont">
-                            <p>
-                                Project 3 :- <strong>Weather information</strong> This HTML and CSS code creates a simple weather information display. The centered box contains a search input, temperature display, and additional weather information. The styling features a transparent black background with a subtle white shadow. The design is clean, using the Courier New font and a powder blue search input. JavaScript functionality is expected from the "index.js" script, which could handle dynamic data retrieval and updates. The overall result is an aesthetically pleasing .
-                            </p>
-                        </div>
-                        <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
-                    </div>
-                </div>
-                <div class="project" id="inner">
-                    <h3>Project 4</h3>
-                    <div>
-                        <div class="project-description" id="Des_cont">
-                            <p>
-                                Project 4 :- <strong>Download Hub</strong> This HTML code creates a web page titled "Download Hub," featuring a dynamic layout for songs and movies. The background showcases an image, setting a visual tone. The page uses marquee elements to add animated highlights, and a centered heading emphasizes "Songs & Movies." Two fieldsets categorize content, one for songs and another for movies. Song links provide options to play or download, while the movie section features scrolling images with a download link. users to explore and download music and movies.
-                            </p>
-                        </div>
-                        <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
-                    </div>
-                </div>
-                <div class="project" id="inner">
-                    <h3>Project 5</h3>
-                    <div>
-                        <div class="project-description" id="Des_cont">
-                            <p>
-                                Project 5:- <strong>Login</strong> This HTML and CSS code forms a stylish and user-friendly login page. The design prioritizes simplicity and functionality, featuring intuitive input fields, icons, and options like "Remember Me" and password recovery. The overall aesthetic, defined by a centered layout, pleasing color scheme, and subtle shadows, contributes to a modern look. Additionally, references to external styles hint at potential project expansions, showcasing a comprehensive approach to web development.
-                            </p>
-                        </div>
-                        <a class="project-link" href="https://example.com/project1" target="_blank">View Description</a>
-                    </div>
-                </div>
-                <div class="project" id="inner">
-                    <h3>Project Details</h3>
-                    <div>
-                        <div class="more" id="Des_cont">
-                            <p>
-                                I have made many more projects that you will get on Git Hub
-                            </p>
-                        </div>
-                       
-                    </div>
-                </div>
+            <div class="service-box">
+                <i class="fa-brands fa-android"></i>
+                <h3>App Development</h3>
+                <p>Our static app development service offers a streamlined solution for creating lightweight mobile applications using XML and Java technologies. Whether you need a simple informational app or a prototype to showcase your idea, our team specializes in developing static apps that are efficient.</p>
+                <a href="#" class="btn">Read More</a>
+    
+            </div>
+    </div>
+</selection>
+<!-----portfoliio selection design-->
+
+<selection class="portfolio" id="portfolio">
+    <h2 class="heading">Latest <span>Projects</span></h2>
+    <div class="portfolio-container">
+        <div class="portfolio-box">
+            <img src="img5.jpg" alt="">
+            <div class="portfolio-layer">
+                <h4>Blog Application</h4>
+                <p><b style="color: black;">MERN PROJECT</b> <br> Loading Details.......</p>
+                <i class="fa-solid fa-up-right-from-square"></i>
             </div>
         </div>
-    </section>
+        
+            <div class="portfolio-box">
+                <img src="img5.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Quick mart - Website</h4>
+                    <p> <b style="color: black;">FRONT- END PROJECT </b> <br> Loading Details.......</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+            </div>
+            
+                <div class="portfolio-box">
+                    <img src="img5.jpg" alt="">
+                    <div class="portfolio-layer">
+                        <h4>Toivo App</h4>
+                        <p> <b style="color: black;">MUSIC PLAYER PROJECT </b><br> Loading Details.......</p>
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </div>
+                </div>
+                
+                    <div class="portfolio-box">
+                        <img src="img5.jpg" alt="">
+                        <div class="portfolio-layer">
+                            <h4>Weather - Website</h4>
+                            <p> <b style="color: black;">WEATHER INFO PROJECT </b> <br> Loading Details.......</p>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-box">
+                        <img src="img5.jpg" alt="">
+                        <div class="portfolio-layer">
+                            <h4>Calculater</h4>
+                            <p>Loading Details.......</p>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </div> 
+                    </div>
+                    <div class="portfolio-box">
+                        <img src="img5.jpg" alt="">
+                        <div class="portfolio-layer">
+                            <h4>Login page</h4>
+                            <p>Loading Details.......</p>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </div> 
+                    </div>
+    </div>
+</selection>
+<!-----portfoliio selection design-->
+<selection class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me</span></h2>
+    <form action="https://api.web3forms.com/submit" method="POST"" method="post">
+        <div class="input-box">
+          <input type="hidden" name="access_key" value="e53bcd6d-9d54-4892-bb0a-8892d4fac3bc">
+          <input type="text" id="name"placeholder="name" name="name" required>
+          <input type="email" id="email" placeholder="Email" name="email" required>
+        </div>
+          <textarea id="message" cols="30" rows="10" name="message"  placeholder="'How can i help you ?" required></textarea>
+          <button class="btn" type="submit" onsubmit="sendEmail(); reset(); return false;">Submit message</button>
+      </form>
+</selection>
+   <footer class="footer">
+    <div class="footer-text">
+        <p>Copyright &copy; 2024 by @DeepakMishra004 | All Rights Reserved</p>
+    </div>
+    <div class="footer-iconTop">
+        <a href="#home"> <i class="fa-solid fa-angle-up"></i>
+        </a>
+    </div>
+   </footer>
+   <script src="https://unpkg.com/scrollreveal"></script>
+   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+   <script>
+    let menuIcon = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('.navbar');
+    menuIcon.onclick =()=>{
+    menuIcon.classList.toggle('fa-xmark');
+    navbar.classList.toggle('active');
 
-    <section id="resume" class="sidee">
-        <div class="containere"  >
-            <h4 class="contact">Contact Us</h4>
-            <form action="https://api.web3forms.com/submit" method="POST"" method="post">
-              <div class="form-group">
-                <input type="hidden" name="access_key" value="e53bcd6d-9d54-4892-bb0a-8892d4fac3bc">
-                <h6 class="contact">Name:</h6>
-                <input type="text" id="name"placeholder="name" name="name" required>
-              </div>
-              <div class="form-group">
-                <h6 class="contact">Email:</h6>
-                <input type="email" id="email" placeholder="Email" name="email" required>
-              </div>
-              <div class="form-group">
-                <h6 class="contact">Message:</h6>
-                <textarea id="message" name="message"  placeholder="'How can i help you ?" required></textarea>
-              </div>
-              <div class="form-group">
-                <button type="submit" onsubmit="sendEmail(); reset(); return false;">Submit</button>
-              </div>
-            </form>
-          </div>
-    </section>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script>
-      const cube = document.querySelector('.cube');
+}
 
-// Add event listeners to rotate the cube on mouse hover
-cube.addEventListener('mouseenter', () => {
-    cube.style.animation = 'none';
+
+
+let section = document.querySelector('section');
+    let navLink = document.querySelector('header nav a');
+    window.onscroll=()=>{
+        section.forEach(sec =>{
+            let top = window.scrollY;
+            let offset = sec.offsetTop - 150;
+            let height = sec.offsetHeight;
+            let id = sec.getAttribute('id');
+            if(top >= offset && top < offset + height){
+                navLink.forEach.apply(links =>{
+                    links.classList.remove('active');
+                    document.querySelector('header nav a[herf*=' + id + ']').classList.add('active');
+                })
+            }
+        })
+    
+/*-----stick-------- navbar------*/
+let header = document.querySelector('header');
+header.classList.toggle('sticky',window.scroll > 100);
+/*================================remove toggle icon and navbar===========*/
+    menuIcon.classList.remove('fa-xmark');
+     navbar.classList.remove('active');
+    };
+
+/*========================scrool reveal===================*/
+ScrollReveal({
+    distance:'80px',
+    duration:2000,
+    delay:200,
+})
+ScrollReveal().reveal('.home-container,heading', {origin:'top'});
+ScrollReveal().reveal('.home-img, .service-container, .portfolio-box, .contact form', {origin:'button'});
+ScrollReveal().reveal('.home-container h1, .about-img',{origin: 'left'});
+ScrollReveal().reveal('.home-container p, .about-content',{origin: 'right'});
+
+/*==============typed of===========*/
+
+
+       
+const typed = new Typed('.multiple-text', {
+    strings:['Frontend Developer', 'Web Designer' ,'MERN Developer'],
+    typeSpeed: 70,
+    backSpeed: 70,
+    backDelay: 1000,
+    loop:true,
 });
-
-cube.addEventListener('mouseleave', () => {
-    cube.style.animation = 'rotateCube 10s infinite linear';
-});
-
-// Add event listeners to rotate the cube on touch
-cube.addEventListener('touchstart', () => {
-    cube.style.animation = 'none';
-});
-
-cube.addEventListener('touchend', () => {
-    cube.style.animation = 'rotateCube 10s infinite linear';
-});
-
-        var typed = new Typed("#element", {
-          strings: ["Web Developer", "Microsoft office expert", "Fresher"],
-          typeSpeed: 50,
-        });
-      </script>
-
-    <footer>
-        <p>&copy; 2024 Deepak Mishra</p>
-    </footer>
+</script>
 </body>
 </html>
